@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Стиль заголовка H1, такий самий як на головній сторінці */
+        .header-title {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-style: italic;
+            color: #fff;
+            margin: 0;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.2;
+            margin: 0;
+        }
+        a {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Блог</h1> <!-- Додаємо клас заголовку -->
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Мої публікації</h2>
+        <article>
+            <h3>5 порад для початківців фотографів</h3>
+            <p>У цій статті я поділюся кількома порадами, які допоможуть вам зробити перші кроки у світі фотографії...</p>
+            <a href="/5_poriad_dlia_pochatkivtsiv">Читати далі</a> <!-- Змінене посилання -->
+        </article>
+        <article>
+            <h3>Чому важливо обрати свій стиль фотографії</h3>
+            <p>Створення власного стилю фотографії є ключовим для будь-якого фотографа...</p>
+            <a href="/chomu_vazhlyvo_obraty_styl">Читати далі</a> <!-- Змінене посилання -->
+        </article>
+        <article>
+            <h3>Техніка зйомки: основи композиції</h3>
+            <p>Композиція — це одна з основ, на яких базується хороша фотографія...</p>
+            <a href="/osnovy_kompozytsii">Читати далі</a> <!-- Змінене посилання -->
+        </article>
+        <article>
+            <h3>Як вибрати обладнання для початківця фотографа</h3>
+            <p>Вибір правильного обладнання може бути складним, особливо для початківців. У цій статті ми розглянемо основні аспекти...</p>
+            <a href="/vybir_obladnannia">Читати далі</a> <!-- Змінене посилання -->
+        </article>
+        <article>
+            <h3>Робота з освітленням: поради та техніки</h3>
+            <p>Освітлення є критично важливим аспектом фотографії. У цьому блозі ми розглянемо різні техніки освітлення...</p>
+            <a href="/robota_z_osvitlennyam">Читати далі</a> <!-- Змінене посилання -->
+        </article>
+    </section>
+
+</body>
+</html>

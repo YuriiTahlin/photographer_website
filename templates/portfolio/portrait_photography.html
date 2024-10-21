@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портретна зйомка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Фон для сторінки */
+        body {
+            background-image: url('/images/7.jpg'); /* Вказуємо шлях до зображення фону */
+            font-style: italic; /* Курсив для всього тексту */
+            margin: 0; /* Прибираємо відступи */
+            padding: 0; /* Прибираємо внутрішні відступи */
+            min-height: 160vh; /* Висота тіла на 100% від вікна перегляду */
+        }
+
+        /* Стиль для шапки */
+        header {
+            width: 100%; /* Займає всю ширину */
+            padding: 10px 0; /* Відступи зверху і знизу */
+            box-sizing: border-box; /* Включає padding в загальну ширину */
+            margin: 0; /* Прибираємо зовнішні відступи */
+            text-align: center; /* Центруємо текст у шапці */
+        }
+
+        /* Стиль для заголовка */
+        h1 {
+            font-family: 'Georgia', serif; /* Змінюємо шрифт заголовка */
+            font-size: 36px; /* Збільшуємо розмір шрифту */
+            color: #fff; /* Колір тексту */
+            margin: 0; /* Прибираємо відступи */
+        }
+
+        /* Стиль для заголовка 2-го рівня */
+        h2 {
+            font-size: 30px; /* Задайте бажаний розмір шрифту */
+            color: #000; /* Колір тексту */
+            margin-bottom: 20px; /* Відступи між заголовками */
+        }
+
+        /* Стиль для зображень */
+        .image-gallery {
+            display: flex; /* Використовуємо Flexbox для вирівнювання */
+            flex-wrap: wrap; /* Дозволяємо зображенням переходити на новий ряд */
+            justify-content: center; /* Вирівнюємо зображення по центру */
+            margin: 0 auto; /* Центруємо галерею */
+            max-width: 1200px; /* Максимальна ширина галереї */
+        }
+
+        .image-gallery img {
+            width: calc(50% - 20px); /* Два зображення в ряд з відступами */
+            margin: 10px; /* Відступи між зображеннями */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Додаємо анімацію */
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.03); /* Збільшуємо зображення на 3% */
+            opacity: 0.9; /* Зменшуємо прозорість */
+        }
+
+        /* Стиль для кнопок навігації */
+        nav a {
+            font-style: normal; /* Прибираємо курсив з кнопок */
+            margin: 0 10px; /* Відступи між кнопками */
+            color: #fff; /* Колір тексту */
+            text-decoration: none; /* Без підкреслення */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Портретна зйомка</h1>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Галерея портретних фотографій</h2>
+        <div class="image-gallery">
+            <img src="{{ url_for('images', filename='11.jpg') }}" alt="Портретна фотографія 11">
+            <img src="{{ url_for('images', filename='12.jpg') }}" alt="Портретна фотографія 12">
+            <img src="{{ url_for('images', filename='13.jpg') }}" alt="Портретна фотографія 13">
+            <img src="{{ url_for('images', filename='25.jpg') }}" alt="Портретна фотографія 25">
+            <img src="{{ url_for('images', filename='26.jpg') }}" alt="Портретна фотографія 26">
+            <img src="{{ url_for('images', filename='27.jpg') }}" alt="Портретна фотографія 27">
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

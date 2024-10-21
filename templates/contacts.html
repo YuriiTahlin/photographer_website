@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Стилі для форми */
+        section {
+            padding: 20px; /* Відступи навколо секції */
+            max-width: 600px; /* Максимальна ширина секції */
+            margin: auto; /* Центрування секції */
+        }
+
+        h2 {
+            margin-top: 40px; /* Додаємо верхній відступ для заголовка */
+        }
+
+        form {
+            display: flex; /* Використовуємо Flexbox для вирівнювання */
+            flex-direction: column; /* Стовпчикова орієнтація */
+            margin-top: 50px; /* Відступ між заголовком і формою */
+        }
+
+        label {
+            margin-bottom: 5px; /* Відступ між міткою та полем вводу */
+            font-weight: bold; /* Жирний шрифт для міток */
+        }
+
+        input, textarea {
+            margin-bottom: 15px; /* Відступ між полями вводу */
+            padding: 10px; /* Внутрішні відступи для полів вводу */
+            font-size: 16px; /* Розмір шрифту для полів вводу */
+            border: 1px solid #ccc; /* Кордон для полів вводу */
+            border-radius: 4px; /* Закруглені краї */
+            width: 100%; /* Ширина 100% для полів вводу */
+            box-sizing: border-box; /* Включає відступи та кордони в загальну ширину */
+        }
+
+        button {
+            padding: 10px 15px; /* Внутрішні відступи для кнопки */
+            font-size: 16px; /* Розмір шрифту для кнопки */
+            background-color: #4CAF50; /* Колір фону кнопки */
+            color: white; /* Колір тексту кнопки */
+            border: none; /* Без кордонів */
+            border-radius: 4px; /* Закруглені краї для кнопки */
+            cursor: pointer; /* Курсор у вигляді руки при наведенні */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Зміна кольору при наведенні */
+        }
+
+        /* Стиль для тексту в курсиві */
+        .social-info {
+            font-style: italic; /* Застосовуємо курсив */
+            line-height: 1.2; /* Висота рядка для контролю відстані між рядками */
+            font-size: 20px; /* Збільшуємо розмір шрифту */
+        }
+
+        .social-container {
+            margin-top: 55px; /* Відступ між кнопкою і блоком соціальних мереж */
+        }
+
+        /* Стиль заголовка H1, такий самий як на головній сторінці */
+        .header-title {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-style: italic;
+            color: #fff;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Контакти</h1> <!-- Додаємо клас заголовку -->
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Для зв'язку зі мною заповніть форму нижче:</h2>
+        <form action="#" method="POST" onsubmit="return validateForm()">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Відправити</button>
+        </form>
+
+        <div class="social-container">
+            <p class="social-info">Або ви можете зв'язатися зі мною через соціальні мережі:</p>
+            <p class="social-info">Twitter/X: @krasiy_olha</p>
+            <p class="social-info">Facebook: @krasiy_olha</p>
+            <p class="social-info">Telegram or Viber: @krasiy_photographer</p>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Резервний фоновий колір */
+    background-image: url('/images/7.jpg'); /* Шлях до фону */
+    background-size: cover; /* Розтягуємо фон на всю площу */
+    background-repeat: no-repeat; /* Не повторюємо фон */
+    background-position: center; /* Центруємо фон */
+    height: 100vh; /* Висота на 100% висоти вікна перегляду */
+    color: #333;
+}
+
+header {
+    background-color: #333; /* Колір фону шапки */
+    color: white; /* Колір тексту в шапці */
+    padding: 15px; /* Відступи в шапці */
+    text-align: center; /* Центруємо текст в шапці */
+}
+
+.header-container {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    align-items: center; /* Центруємо по вертикалі */
+    justify-content: space-between; /* Вирівнюємо по боках */
+    padding: 25px; /* Відступи навколо шапки */
+}
+
+.header-title {
+    flex-grow: 1; /* Дозволяємо заголовку займати доступний простір */
+    margin-left: 220px; /* Зміщуємо заголовок правіше */
+}
+
+h1 {
+    font-family: 'Georgia', serif; /* Змінюємо шрифт заголовка */
+    font-size: 36px; /* Збільшуємо розмір шрифту заголовка */
+    font-style: italic; /* Застосовуємо курсив */
+    margin: 0; /* Прибираємо відступи */
+}
+
+.contact-info {
+    font-family: Arial, sans-serif; /* Шрифт для контактної інформації */
+    color: #fff; /* Колір тексту */
+    text-align: right; /* Вирівнюємо текст праворуч */
+    margin: 0; /* Прибираємо відступи */
+    margin-left: 20px; /* Зміщуємо контактну інформацію правіше */
+}
+
+nav {
+    margin: 20px 0; /* Відступ між шапкою і навігацією */
+    text-align: center; /* Центруємо навігаційні кнопки */
+}
+
+nav a {
+    color: white; /* Колір тексту кнопів */
+    background-color: #555; /* Колір фону кнопів */
+    padding: 10px 15px; /* Внутрішні відступи кнопів */
+    margin: 0 10px; /* Відстань між кнопками */
+    text-decoration: none; /* Без підкреслення */
+    border-radius: 5px; /* Закруглення країв кнопів */
+}
+
+nav a:hover {
+    background-color: #777; /* Колір фону кнопів при наведенні */
+}
+
+section {
+    text-align: center; /* Центруємо текст у секціях */
+    padding: 10px 20px; /* Внутрішні відступи секцій */
+}
+
+/* Додаємо стиль для галереї фотографій */
+.photo-gallery {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    justify-content: center; /* Центруємо фотографії */
+    flex-wrap: wrap; /* Дозволяємо переносити фотографії на новий рядок */
+}
+
+.photo-gallery img {
+    width: 600px; /* Встановлюємо ширину зображень */
+    height: 800px; /* Встановлюємо висоту для вирівнювання */
+    object-fit: contain; /* Зберігаємо пропорції зображення */
+    margin: 10px; /* Відстань між зображеннями */
+    border-radius: 5px; /* Краї зображень округлені */
+}

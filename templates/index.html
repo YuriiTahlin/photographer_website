@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olha Krasiy - Photographer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Додаємо стиль для заголовка */
+        .header-title {
+            text-align: center; /* Вирівнюємо заголовок по центру */
+            flex-grow: 1; /* Дозволяємо заголовку займати доступний простір */
+            margin-left: 220px; /* Зміщуємо заголовок правіше */
+        }
+        h1 {
+            font-family: 'Georgia', serif; /* Змінюємо шрифт заголовка */
+            font-size: 36px; /* Збільшуємо розмір шрифту */
+            font-style: italic; /* Застосовуємо курсив */
+            color: #fff; /* Колір тексту */
+            margin: 0; /* Прибираємо відступи */
+        }
+        h2 {
+            font-size: 28px; /* Задайте бажаний розмір шрифту */
+            margin-bottom: 10px; /* Зменшуємо відступ між заголовком та наступним елементом */
+        }
+        .header-container {
+            display: flex; /* Використовуємо Flexbox для вирівнювання */
+            align-items: center; /* Центруємо по вертикалі */
+            padding: 15px; /* Відступи навколо шапки */
+        }
+        .contact-info {
+            font-family: Arial, sans-serif; /* Шрифт для контактної інформації */
+            color: #fff; /* Колір тексту */
+            text-align: right; /* Вирівнюємо текст праворуч */
+            margin: 0; /* Прибираємо відступи */
+            margin-left: 20px; /* Зміщуємо контактну інформацію правіше */
+            margin-top: -30px; /* Додайте невеликий верхній відступ для опускання */
+        }
+        nav {
+            margin-top: 10px; /* Відступ між шапкою і навігацією */
+            text-align: center; /* Центруємо навігаційні кнопки */
+        }
+        nav a {
+            margin: 0 10px; /* Відстань між кнопками */
+            color: white; /* Колір тексту кнопок */
+            text-decoration: none; /* Без підкреслення */
+        }
+        /* Стиль для галереї фото */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap; /* Дозволяємо зображенням переходити на новий ряд */
+            justify-content: center; /* Вирівнюємо зображення по центру */
+            margin: 20px 0; /* Відступи згорі та знизу */
+        }
+        .photo-gallery img {
+            width: calc(33.33% - 20px); /* 3 фото в ряд з відступами */
+            margin: 10px; /* Відступи між зображеннями */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Додаємо анімацію */
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.03); /* Збільшуємо зображення на 10% */
+            opacity: 0.9; /* Зменшуємо прозорість */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <h1>Olha Krasiy - Photographer</h1>
+            </div>
+            <div class="contact-info">
+                <p><em>Телефон: +380661234567</em></p>
+                <p><em>Email: olha_krasiy@gmail.com</em></p>
+            </div>
+        </div>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Знімаю те, що надихає</h2>
+        <p style="font-size: 20px;"><em>Вітаю на моєму сайті! Я фотограф-початківець Ольга, що захоплюється створенням неповторних моментів через об'єктив.</em></p>
+        <div class="photo-gallery">
+            <img src="{{ url_for('images', filename='1.jpg') }}" alt="Фото 1">
+            <img src="{{ url_for('images', filename='2.jpg') }}" alt="Фото 2">
+            <img src="{{ url_for('images', filename='3.jpg') }}" alt="Фото 3">
+            <img src="{{ url_for('images', filename='4.jpg') }}" alt="Фото 4">
+            <img src="{{ url_for('images', filename='5.jpg') }}" alt="Фото 5">
+            <img src="{{ url_for('images', filename='6.jpg') }}" alt="Фото 6">
+        </div>
+    </section>
+</body>
+</html>

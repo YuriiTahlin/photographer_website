@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .header-title {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-style: italic;
+            color: #fff;
+            margin: 0;
+        }
+        body {
+            background-image: url('{{ url_for('images', filename='7.jpg') }}'); /* Додайте своє фонове зображення */
+            background-size: cover; /* Розтягуємо зображення на всю ширину та висоту */
+            background-position: center; /* Центруємо зображення */
+            min-height: 410vh; /* Висота тіла на 100% від вікна перегляду */
+            color: #000; /* Чорний колір тексту */
+        }
+        section h2 {
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            font-size: 28px;
+        }
+        .services-list {
+            font-style: italic;
+            font-size: 20px;
+            list-style-type: none; /* Прибираємо точки зі списку */
+            padding: 0;
+        }
+        .services-list li {
+            margin-bottom: 15px;
+        }
+        .service-description {
+            font-size: 20px;
+        }
+        /* Стиль для зображень */
+        .service-images {
+            display: flex; /* Використовуємо Flexbox для горизонтального розташування */
+            flex-wrap: wrap; /* Дозволяємо перенесення зображень на новий ряд, якщо не вміщуються */
+            justify-content: center; /* Центруємо зображення */
+            margin: 15px 0; /* Відступи зверху та знизу */
+        }
+        .service-image {
+            max-width: 500px; /* Встановлюємо однакову ширину для всіх зображень */
+            height: auto; /* Автоматичне масштабування висоти */
+            margin: 15px; /* Відступи між зображеннями */
+            transition: transform 0.3s, opacity 0.3s; /* Додаємо плавний перехід для збільшення та прозорості */
+        }
+        .service-image:hover {
+            transform: scale(1.03); /* Збільшення зображення на 3% при наведенні */
+            opacity: 0.9; /* Зменшення прозорості */
+        }
+        /* Стиль для останнього рядка */
+        .contact-info {
+            font-size: 22px;
+            text-align: center;
+            margin-top: 70px; /* Додаємо відступ вниз */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Послуги</h1>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Мої Послуги</h2>
+        <ul class="services-list">
+            <li><strong>Весільна фотографія</strong>
+                <p class="service-description">Я допоможу вам зберегти найкращі моменти вашого особливого дня в емоційних та незабутніх світлинах. Від підготовки до кінця вечора, кожна мить буде збережена в деталях. Ми можемо обговорити ваші ідеї та зробити фотосесію максимально унікальною та зворушливою. Разом ми створимо фотографії, які будуть нагадувати про цей важливий день через роки.</p>
+                <div class="service-images">
+                    <img src="{{ url_for('images', filename='1.jpg') }}" alt="Весільна фотографія 1" class="service-image">
+                    <img src="{{ url_for('images', filename='2.jpg') }}" alt="Весільна фотографія 2" class="service-image">
+                    <img src="{{ url_for('images', filename='3.jpg') }}" alt="Весільна фотографія 3" class="service-image">
+                </div>
+            </li>
+            <li><strong>Портретна зйомка</strong>
+                <p class="service-description">Створюю унікальні портрети, які підкреслюють вашу індивідуальність. Працюю як в студії, так і на відкритих просторах для досягнення бажаного результату. Незалежно від того, чи це бізнес-портрет або творча зйомка, я докладу максимум зусиль, щоб ви відчували себе комфортно та впевнено перед камерою. Мої портрети відображають вашу особисту історію та емоції.</p>
+                <div class="service-images">
+                    <img src="{{ url_for('images', filename='11.jpg') }}" alt="Портретна зйомка 1" class="service-image">
+                    <img src="{{ url_for('images', filename='12.jpg') }}" alt="Портретна зйомка 2" class="service-image">
+                    <img src="{{ url_for('images', filename='13.jpg') }}" alt="Портретна зйомка 3" class="service-image">
+                </div>
+            </li>
+            <li><strong>Фотозйомка сімейних подій</strong>
+                <p class="service-description">Знімаю важливі моменти з життя вашої родини: від днів народжень до великих родинних свят, зберігаючи найтепліші спогади. Кожна родинна подія має свою особливу атмосферу, і я прагну передати її на світлинах. Моя робота полягає в тому, щоб через фотографії ви змогли знову і знову переживати ці моменти разом з рідними.</p>
+                <div class="service-images">
+                    <img src="{{ url_for('images', filename='14.jpg') }}" alt="Сімейні події 1" class="service-image">
+                    <img src="{{ url_for('images', filename='15.jpg') }}" alt="Сімейні події 2" class="service-image">
+                    <img src="{{ url_for('images', filename='16.jpg') }}" alt="Сімейні події 3" class="service-image">
+                </div>
+            </li>
+            <li><strong>Натюрморт та предметна фотографія</strong>
+                <p class="service-description">Фотозйомка предметів для каталогів, реклами або просто для творчих проєктів. Професійний підхід та увага до деталей допоможуть підкреслити особливості кожного об’єкта. Цей вид зйомки вимагає ретельної підготовки, правильного освітлення та композиції. Я гарантую якісні знімки, які будуть відповідати вашим вимогам та очікуванням.</p>
+                <div class="service-images">
+                    <img src="{{ url_for('images', filename='8.jpg') }}" alt="Натюрморт" class="service-image">
+                    <img src="{{ url_for('images', filename='9.jpg') }}" alt="Предметна фотографія" class="service-image">
+                    <img src="{{ url_for('images', filename='10.jpg') }}" alt="Предметна фотографія" class="service-image">
+                </div>
+            </li>
+            <li><strong>Фотографії на замовлення</strong>
+                <p class="service-description">Якщо у вас є особливий задум або проєкт, я готовий допомогти втілити його в життя за допомогою фотомистецтва. Від концептуальної зйомки до реалізації складних ідей — я відкритий до творчих експериментів. Ретельна підготовка та обговорення деталей допоможуть досягти найкращих результатів, які вас приємно здивують.</p>
+                <div class="service-images">
+                    <img src="{{ url_for('images', filename='17.jpg') }}" alt="Фотографії на замовлення 1" class="service-image">
+                    <img src="{{ url_for('images', filename='18.jpg') }}" alt="Фотографії на замовлення 2" class="service-image">
+                </div>
+            </li>
+        </ul>
+        <p class="contact-info"><em>Якщо ви зацікавлені у співпраці або маєте питання, не соромтеся <a href="/contacts">зв'язатися зі мною</a>.</em></p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Весільна фотографія</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Фон для сторінки */
+        body {
+            background-image: url('/images/7.jpg'); /* Вказуємо шлях до зображення фону */
+            font-style: italic; /* Курсив для всього тексту */
+            margin: 0; /* Прибираємо відступи */
+            padding: 0; /* Прибираємо внутрішні відступи */
+            min-height: 150vh; /* Висота тіла на 100% від вікна перегляду */
+        }
+
+        /* Стиль для шапки */
+        header {
+            width: 100%; /* Займає всю ширину */
+            padding: 10px 0; /* Відступи зверху і знизу */
+            box-sizing: border-box; /* Включає padding в загальну ширину */
+            margin: 0; /* Прибираємо зовнішні відступи */
+            text-align: center; /* Центруємо текст у шапці */
+        }
+
+        /* Стиль для заголовка */
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            color: #fff; /* Білий колір тексту */
+            margin: 0; /* Прибираємо відступи */
+        }
+
+        /* Стиль для заголовка 2-го рівня */
+        h2 {
+            font-size: 30px;
+            color: #000;
+            margin-bottom: 20px; /* Відступ між заголовком та текстом */
+        }
+
+        /* Стиль для навігаційного меню */
+        nav {
+            text-align: center; /* Центруємо навігаційне меню */
+        }
+
+        nav a {
+            font-style: normal; /* Прибираємо курсив з кнопок */
+            margin: 0 10px; /* Відступи між кнопками */
+            color: #fff; /* Колір тексту */
+            text-decoration: none; /* Без підкреслення */
+        }
+
+        /* Стиль для зображень */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap; /* Дозволяємо зображенням переходити на новий ряд */
+            justify-content: space-between; /* Вирівнюємо зображення по ширині */
+            margin: 0 auto; /* Центруємо галерею */
+            max-width: 1200px; /* Максимальна ширина галереї */
+        }
+
+        .image-gallery img {
+            width: calc(33.33% - 20px); /* Кожне зображення займає 1/3 ширини, з урахуванням відступів */
+            height: auto; /* Автоматична висота */
+            margin-bottom: 20px; /* Відступи між рядами */
+            display: block; /* Вирівнювання в один ряд */
+            object-fit: cover; /* Заповнює контейнер, зберігаючи пропорції */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Додаємо анімацію */
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.03); /* Збільшуємо зображення на 3% */
+            opacity: 0.9; /* Зменшуємо прозорість */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Весільна фотографія</h1>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/portfolio">Портфоліо</a>
+            <a href="/about">Про мене</a>
+            <a href="/services">Послуги</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/blog">Блог</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Галерея весільних фотографій</h2>
+        <div class="image-gallery">
+            <img src="{{ url_for('images', filename='1.jpg') }}" alt="Весільна фотографія 1">
+            <img src="{{ url_for('images', filename='2.jpg') }}" alt="Весільна фотографія 2">
+            <img src="{{ url_for('images', filename='3.jpg') }}" alt="Весільна фотографія 3">
+            <img src="{{ url_for('images', filename='4.jpg') }}" alt="Весільна фотографія 4">
+            <img src="{{ url_for('images', filename='5.jpg') }}" alt="Весільна фотографія 5">
+            <img src="{{ url_for('images', filename='6.jpg') }}" alt="Весільна фотографія 6">
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
